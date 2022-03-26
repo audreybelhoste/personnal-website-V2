@@ -1,0 +1,47 @@
+.container{
+	@include desktop{
+		display: flex;
+	}
+}
+
+.section{
+	padding: 15px;
+	transition: all ease 0.3s;
+
+	@include desktop{
+		position: relative;
+		padding: 0 0 0 100px;
+		max-height: 100vh;
+	}
+}
+
+.section:not(.presentation){
+	.section__content{
+		@include desktop{
+			max-height: 100vh;
+			overflow-y: scroll;
+			overflow-x: hidden;
+		}
+	}
+}
+
+.section.active{
+	@include desktop{
+		max-width: calc(100vw - 300px);
+		min-width: calc(100vw - 300px);
+	}
+}
+
+.section:not(.active){
+	@include desktop{
+		max-width: 100px;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.section__content{
+		@include desktop{
+			opacity: 0;
+		}
+	}
+}

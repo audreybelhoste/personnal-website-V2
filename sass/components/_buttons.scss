@@ -1,0 +1,11 @@
+.btn-primary{
+	color: $color-text;
+	display: block;
+	text-align: right;
+	background-color: transparent;
+	border: none;
+	text-decoration: underline;
+	width: 100%;
+
+	@extend .font-sourceSerifPro;
+}
