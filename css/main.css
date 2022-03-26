@@ -844,7 +844,8 @@ h1, h2, h3 {
   border: none;
   text-decoration: underline;
   width: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 2; }
 
 @media (min-width: 1200px) {
   .container {
