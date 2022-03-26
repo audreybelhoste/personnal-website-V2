@@ -3,46 +3,38 @@
 	padding: 15px 15px 40px 15px;
 
 	.section__content{
-		@include desktop{
-			min-height: 100vh;
+		@include tablet{
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 		}
 	}
 
-	@include desktop{
-		padding-left: 100px;
-		max-width: 100px;
-		overflow: hidden;
-		position: relative;
-	}
-
 	form{
-		@include desktop{
+		@include tablet{
 			background-color: rgba(255, 241, 230, 0.5);
 			border-radius: 20px;
-			max-width: 900px;
+			max-width: 700px;
 			margin: 40px auto;	
 			display: flex;
-			padding: 40px;
+			padding: 20px;
 			column-gap: 60px;
+		}
+
+		@include laptop{
+			padding: 40px;
+			max-width: 800px;
 		}
 
 		input{
 			width: 100%;
-
-			@include desktop{
-				width: auto;
-				min-width: 300px;
-			}
 		}
 
 		input, textarea{
 			margin-bottom: 10px;
 			padding: 10px;
 
-			@include desktop{
+			@include tablet{
 				border-radius: 5px;
 				border: none;
 			}
@@ -53,7 +45,7 @@
 			resize: vertical;
 			width: 100%;
 
-			@include desktop{
+			@include tablet{
 				height: 100%;
 				resize: none;
 				min-width: 300px;
@@ -69,12 +61,14 @@
 
 			@extend .font-semibold;
 
-			&::after{
-				content: "*";
-				color: red;
-				position: absolute;
-				top: 0;
-				right: 0;
+			&.required{
+				&::after{
+					content: "*";
+					color: red;
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
 			}
 		}
 	}
@@ -95,7 +89,7 @@
 	}
 
 	.postcardRight{
-		@include desktop{
+		@include tablet{
 			padding-top: 200px;
 			position: relative;
 		}
@@ -103,7 +97,7 @@
 		&__formRow{
 			position: relative;
 
-			@include desktop{
+			@include tablet{
 				display: flex;
 				align-items: center;
 				margin-bottom: 5px;
@@ -128,7 +122,7 @@
 			}
 		}
 
-		@include desktop{
+		@include tablet{
 			&::before{
 				content: "";
 				background-image: url(../img/stamp1.svg);

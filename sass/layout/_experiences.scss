@@ -2,7 +2,7 @@
 	background-color: $color-experiences;
 
 	.section__content{
-		@include desktop{
+		@include tablet{
 			min-height: 100vh;
 			display: flex;
 			flex-direction: column;
@@ -12,25 +12,36 @@
 
 	&__item{
 		position: relative;
+
+		@include tablet{
+			margin: 0 auto;
+			width: 100%;
+			max-width: 900px;
+		}
+
 		&:first-of-type{
 			&::before{
 				position: absolute;
 				content: " "; 
-				width: 100vw;
+				width: calc(100% + 30px);
 				height: 1px;
-				left: -15px;
+				left: 0;
 				background-color: $color-text;
 				top: 0;
+
+				@include tablet{
+					width: 100%;
+				}
 			}
 		}
 
-		@include desktop{
+		@include tablet{
 			&::after{
 				position: absolute;
 				content: " "; 
-				width: 100vw;
+				width: 100%;
 				height: 1px;
-				left: -15px;
+				left: 0;
 				background-color: $color-text;
 				bottom: 0;
 			}
@@ -44,7 +55,7 @@
 				&::after{
 					position: absolute;
 					content: " "; 
-					width: 100vh;
+					width: 100vw;
 					height: 1px;
 					left: -15px;
 					background-color: $color-text;
@@ -54,7 +65,8 @@
 		}
 
 		&__details{
-			padding: 20px 0;
+			padding: 20px;
+			align-self: center;
 	
 			p{
 				margin: 0;
@@ -64,14 +76,18 @@
 				@extend .font-semibold;
 			}
 
-			@include desktop{
-				width: 50%;
-				padding: 30px;
-				align-self: center;
+			@include tablet{
+				width: 100%;
+			}
+
+			&--first, &--second{
+				@include tablet{
+					width: 50%;
+				}
 			}
 
 			&--first{
-				@include desktop{
+				@include tablet{
 					&::after{
 						position: absolute;
 						content: " "; 
@@ -96,6 +112,8 @@
 			border-radius: 100%;
 			min-width: 120px;
 			min-height: 120px;
+			max-width: 120px;
+			max-height: 120px;
 
 			&--double{
 				font-size: 24px;
@@ -117,7 +135,7 @@
 			@extend .font-sourceSerifPro;
 		}
 
-		@include desktop{
+		@include tablet{
 			display: flex;
 		}
 	}
