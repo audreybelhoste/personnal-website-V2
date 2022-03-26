@@ -28,7 +28,7 @@
           </ul>
         </div>
       </section>
-      <section id="projects" class="section projects">
+      <section id="projects" class="section projects right">
         <h2 class="mainTitle">Projets</h2>
           <div class="section__content">
             <div class="projects__item">
@@ -64,7 +64,7 @@
               </div>
             </div>
         </section>
-        <section id="experiences" class="section experiences">
+        <section id="experiences" class="section experiences right">
           <h2 class="mainTitle">Expériences</h2>
           <div class="section__content">
             <div class="experiences__item">
@@ -122,7 +122,7 @@
             </div>
           </div>
       </section>
-      <section id="contact" class="section contact">
+      <section id="contact" class="section contact right">
         <h2 class="mainTitle">Contact</h2>
         <div class="section__content">
           <form action="/pages/success" name="contact" method="POST" data-netlify="true">
@@ -156,11 +156,21 @@
     </div>
     <script>
       window.onload = function(){
-        const titles = document.querySelectorAll('.mainTitle');
-        titles.forEach(element => {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(element => {
           element.addEventListener('click', event => {
             document.querySelector('.active').classList.remove('active');
-            element.parentNode.classList.add('active');
+            let arrow = 'left';
+            let currentSection = element.id;
+            sections.forEach(element => {
+              element.classList.remove('left', 'right');
+              if(element.id == currentSection){
+                element.classList.add('active');
+                arrow = 'right';
+              } else {
+                element.classList.add(arrow);
+              }
+            })
           })
         });
 

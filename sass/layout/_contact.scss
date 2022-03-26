@@ -1,14 +1,14 @@
 .contact{
 	background-color: $color-contact;
-	padding: 15px 15px 40px 15px;
+	// padding: 15px 15px 40px 15px;
 
-	.section__content{
-		@include tablet{
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		}
-	}
+	// .section__content{
+	// 	@include tablet{
+	// 		display: flex;
+	// 		flex-direction: column;
+	// 		justify-content: center;
+	// 	}
+	// }
 
 	form{
 		@include tablet{
@@ -157,5 +157,4 @@
 	margin: 40px;
 	display: flex;
 	justify-content: center;
-	
 }

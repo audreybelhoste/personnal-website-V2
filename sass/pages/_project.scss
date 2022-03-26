@@ -9,6 +9,7 @@
 	padding: 15px;
 
 	&__header{
+		text-align: right;
 		@include laptop{
 			flex-direction: row;
 			justify-content: space-between;
@@ -18,9 +19,11 @@
 	&__mainTitle{
 		font-size: 24px;
 		padding: 60px 0;
+		position: relative;
+		text-align: left;
 		@extend .font-poppins, .font-light;
 
-		@include laptop{
+		@include tablet{
 			font-size: 40px;
 		}
 
@@ -30,20 +33,12 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			position: absolute;
-			transform: rotate(-15deg);
-			top: 25px;
-			left: 0;
-			width: 250px;
-			height: 125px;
+			transform: translateY(-50%) rotate(-45deg);
+			top: 0;
+			left: -60px;
+			width: 500px;
+			height: 150px;
 			opacity: 0.2;
-
-			@include desktop{
-				top: 0;
-				left: 0; 
-				width: 400px;
-				height: 300px;
-				transform: rotate(15deg);
-			}
 		}
 	}
 

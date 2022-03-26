@@ -2,7 +2,6 @@
 	font-size: 40px;
 	text-transform: uppercase;
 	padding: 20px 0;
-	cursor: pointer;
 
 	@extend .font-poppins, .font-light;
 
@@ -27,6 +26,25 @@
 			height: 40px;
 			border: solid 1px $color-text;
 			border-radius: 100%;
+			transition: all 0.3s $bezier;
+		}
+	}
+}
+
+.right{
+	.mainTitle{
+		&::before{
+			transform: rotate(-90deg) translate(50%);
+			transform-origin: center;
+		}
+	}
+}
+
+.left{
+	.mainTitle{
+		&::before{
+			transform: rotate(90deg) translate(-50%);
+			transform-origin: center;
 		}
 	}
 }

@@ -3,10 +3,7 @@
 
 	.section__content{
 		@include tablet{
-			min-height: 100vh;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
+			padding: 40px 0;
 		}
 	}
 
@@ -25,13 +22,9 @@
 				content: " "; 
 				width: calc(100% + 30px);
 				height: 1px;
-				left: 0;
+				left: -15px;
 				background-color: $color-text;
 				top: 0;
-
-				@include tablet{
-					width: 100%;
-				}
 			}
 		}
 
@@ -39,9 +32,9 @@
 			&::after{
 				position: absolute;
 				content: " "; 
-				width: 100%;
+				width: calc(100% + 30px);
 				height: 1px;
-				left: 0;
+				left: -15px;
 				background-color: $color-text;
 				bottom: 0;
 			}
