@@ -843,7 +843,8 @@ h1, h2, h3 {
   background-color: transparent;
   border: none;
   text-decoration: underline;
-  width: 100%; }
+  width: 100%;
+  cursor: pointer; }
 
 @media (min-width: 1200px) {
   .container {
