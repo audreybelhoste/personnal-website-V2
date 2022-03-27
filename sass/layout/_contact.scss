@@ -159,8 +159,15 @@
 	}
 
 	.btn-primary{
+		margin-left: auto;
+		padding: 0;
+
 		@include mobile{
 			color: $color-light;
+
+			&::before, &::after{
+				background-color: $color-light;
+			}
 		}
 	}
 }
