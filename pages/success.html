@@ -2,14 +2,24 @@
 <html lang="fr">
   <head>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" href="img/favicon.ico" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Audrey Belhoste | Développeuse web</title>
   </head>
   <body>
     <div class="success">
-			<h1 class="success__test">Merci pour votre message, à très vite !</h1>
+      <div class="success__text" id="scene">
+        <h1>Merci pour votre message, à très vite !</h1>
+        <img class="success__text__oval" src="../img/oval.svg" alt="" data-depth="0.6">
+      </div>
 			<a href="../index.html" class="btn-secondary"><span>Retour</span></a>
 		</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+      var scene = document.getElementById('scene');
+      var parallaxInstance = new Parallax(scene);
+    </script>
   </body>
 </html>

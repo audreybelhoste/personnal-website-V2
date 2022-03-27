@@ -1178,27 +1178,27 @@ h1, h2, h3 {
           align-items: center;
   padding: 15px;
   text-align: center; }
-  .success::before {
-    content: "";
-    background-image: url(../img/oval.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+  .success__text__oval {
     position: absolute;
-    -webkit-transform: rotate(34deg);
-            transform: rotate(34deg);
-    top: 0;
-    left: 50%;
-    width: 150%;
-    height: 100%;
+    top: 0 !important;
+    left: -10px !important;
+    width: 450px;
+    height: 200px;
     opacity: 0.2; }
+    @media (min-width: 768px) {
+      .success__text__oval {
+        top: -50px !important;
+        left: 100px !important;
+        width: 500px;
+        height: 300px;
+        -webkit-transform: rotate(-7deg);
+                transform: rotate(-7deg); } }
     @media (min-width: 1200px) {
-      .success::before {
-        top: 20%;
-        left: 25%;
-        width: 800px;
-        height: 800px;
-        -webkit-transform: rotate(15deg);
-                transform: rotate(15deg); } }
+      .success__text__oval {
+        top: -200px !important;
+        left: -100px !important;
+        width: 850px;
+        height: 600px; } }
   .success .btn-primary {
     text-align: center; }
 
