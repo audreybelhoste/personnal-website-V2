@@ -1,18 +1,20 @@
 .contact{
 	background-color: $color-contact;
-	// padding: 15px 15px 40px 15px;
+	color: $color-light;
 
-	// .section__content{
-	// 	@include tablet{
-	// 		display: flex;
-	// 		flex-direction: column;
-	// 		justify-content: center;
-	// 	}
-	// }
+	.section__content{
+		@include huge{
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: baseline;
+		}
+	}
 
 	form{
 		@include tablet{
-			background-color: rgba(255, 241, 230, 0.5);
+			background-color: $color-presentation;
+			background-image: url(../img/beige-paper.png);
 			border-radius: 20px;
 			max-width: 700px;
 			margin: 40px auto;	
@@ -60,6 +62,10 @@
 			font-size: 12px;
 
 			@extend .font-semibold;
+
+			@include tablet{
+				color: $color-text;
+			}
 
 			&.required{
 				&::after{
@@ -151,10 +157,17 @@
 			}
 		}
 	}
+
+	.btn-primary{
+		@include mobile{
+			color: $color-light;
+		}
+	}
 }
 
 .contact__linkedin{
-	margin: 40px;
+	margin: 40px auto;
 	display: flex;
 	justify-content: center;
+	max-width: 200px;
 }

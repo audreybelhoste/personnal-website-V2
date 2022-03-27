@@ -1,4 +1,10 @@
 //== Breakpoints
+@mixin huge {
+	@media (min-width: $min-xl) {
+			@content;
+	}
+}
+
 @mixin desktop {
 	@media (min-width: $min-lg) {
 			@content;

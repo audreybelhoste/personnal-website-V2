@@ -17,28 +17,32 @@
 	}
 
 	&__mainTitle{
-		font-size: 24px;
-		padding: 60px 0;
 		position: relative;
-		text-align: left;
-		@extend .font-poppins, .font-light;
 
-		@include tablet{
-			font-size: 40px;
+		h1{
+			font-size: 24px;
+			padding: 60px 0;
+			text-align: left;
+			@extend .font-poppins, .font-light;
+	
+			@include tablet{
+				font-size: 40px;
+			}
 		}
 
-		&::before{
-			content: "";
-			background-image: url(../img/oval.svg);
-			background-repeat: no-repeat;
-			background-size: contain;
+		&__oval{
 			position: absolute;
-			transform: translateY(-50%) rotate(-45deg);
 			top: 0;
-			left: -60px;
-			width: 500px;
-			height: 150px;
+			left: -50px !important;
+			width: 320px;
+			height: 120px;
 			opacity: 0.2;
+
+			@include tablet{
+				left: 0 !important;
+				width: 400px;
+				height: 150px;
+			}
 		}
 	}
 

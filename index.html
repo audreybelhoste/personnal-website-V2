@@ -11,10 +11,14 @@
       <section id="presentation" class="section presentation active">
         <h2 class="mainTitle">Accueil</h2>
         <div class="section__content">
-        <div class="presentation__container">
-          <h1 class="presentation__title">Bonjour, je suis <span class="presentation__name">Audrey Belhoste</span></h1>
-          <p class="presentation__text">Je suis <span class="presentation__underline">développeuse web</span>, intéressée à la fois par le <span class="presentation__bold">front-end</span> et le <span class="presentation__bold">back-end</span>.</p>
-          <p class="presentation__text">Je vous présente ici <span class="presentation__italic">mon parcours</span>.</p>
+        <div class="presentation__container" id="scene">
+          <div>
+            <h1 class="presentation__title">Bonjour, je suis <span class="presentation__name">Audrey Belhoste</span></h1>
+            <p class="presentation__text">Je suis <span class="presentation__underline">développeuse web</span>, intéressée à la fois par le <span class="presentation__bold">front-end</span> et le <span class="presentation__bold">back-end</span>.</p>
+            <p class="presentation__text">Je vous présente ici <span class="presentation__italic">mon parcours</span>.</p>
+          </div>
+          <img class="presentation__container__oval" src="img/oval.svg" alt="" data-depth="0.9">
+          <img class="presentation__container__sparkle" src="img/sparkle.svg" alt="" data-depth="0.1">
         </div>
           <ul class="presentation__competences">
             <li class="presentation__competences__item">HTML</li>
@@ -43,7 +47,7 @@
             </div>
 
             <div class="projects__item">
-              <h3 class="projects__item__title"><span class="projects__item__title__number">01</span>Projets de formation</h3>
+              <h3 class="projects__item__title"><span class="projects__item__title__number">02</span>Projets de formation</h3>
               <div class="projects__item__img">
                 <img src="img/sportsee.png" alt="Capture d'écran projet SportSee">
               </div>
@@ -179,6 +183,11 @@
           document.querySelector('#presentation').classList.remove('active');
         }
       }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+      var scene = document.getElementById('scene');
+      var parallaxInstance = new Parallax(scene);
     </script>
   </body>
 </html>
