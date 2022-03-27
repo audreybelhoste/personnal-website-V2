@@ -185,6 +185,12 @@
 
 	.btnGroup{
 		margin: 50px auto 10px;
-		text-align: center;
+		display: flex;
+		column-gap: 30px;
+		flex-wrap: wrap;
+
+		a{
+			margin-bottom: 20px;
+		}
 	}
 }
