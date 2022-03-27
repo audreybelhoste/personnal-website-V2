@@ -10,7 +10,10 @@
     <div class="project">
 			<header class="project__header">
 				<a href="../index.html#projects" class="btn-secondary">Retour</a>
-				<h1 class="project__mainTitle">Projet personnel</h1>
+				<div class="project__mainTitle" id="scene">
+					<h1>Projet personnel</h1>
+					<img class="project__mainTitle__oval" src="../img/oval2.svg" alt="" data-depth="0.6">
+				</div>
 			</header>
 		<div class="project__item">
 			<h2 class="project__item__title">Qui veut quoi ?</h2>
@@ -38,5 +41,10 @@
 				</div>
 			</div>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+      var scene = document.getElementById('scene');
+      var parallaxInstance = new Parallax(scene);
+    </script>
   </body>
 </html>

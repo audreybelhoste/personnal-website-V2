@@ -421,6 +421,7 @@ h1, h2, h3 {
     .presentation__container__sparkle {
       position: absolute;
       top: auto !important;
+      left: auto !important;
       bottom: -20px !important;
       right: 20px !important;
       width: 60px;
@@ -512,7 +513,13 @@ h1, h2, h3 {
           -ms-flex-direction: column;
               flex-direction: column; } }
   .projects__item {
-    position: relative; }
+    position: relative;
+    text-decoration: none;
+    color: #081c15; }
+    @media (min-width: 768px) {
+      .projects__item:hover .projects__item__img {
+        -webkit-filter: saturate(1);
+                filter: saturate(1); } }
     @media (min-width: 768px) {
       .projects__item {
         margin: 40px auto;
@@ -566,6 +573,10 @@ h1, h2, h3 {
       margin: 20px auto; }
       @media (min-width: 768px) {
         .projects__item__img {
+          -webkit-filter: saturate(0);
+                  filter: saturate(0);
+          -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
           max-width: 220px;
           position: absolute;
           right: 10px;

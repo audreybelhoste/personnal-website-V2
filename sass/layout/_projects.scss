@@ -12,6 +12,16 @@
 
 	&__item{
 		position: relative;
+		text-decoration: none;
+		color: $color-text;
+
+		@include tablet{
+			&:hover{
+				.projects__item__img{
+					filter: saturate(1);
+				}
+			}
+		}
 
 		@include tablet{
 			margin: 40px auto;
@@ -80,6 +90,8 @@
 			margin: 20px auto;
 
 			@include tablet{
+				filter: saturate(0);
+				transition: all 0.3s $bezier;
 				max-width: 220px;
 				position: absolute;
 				right: 10px;
